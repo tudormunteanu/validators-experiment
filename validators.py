@@ -21,7 +21,7 @@ class RequiredValue(BaseValidator):
     error_message = "Field is required."
 
     def is_valid(self, data):
-        return data is not None
+        return data is not None and len(data)
 
 
 @dataclass
